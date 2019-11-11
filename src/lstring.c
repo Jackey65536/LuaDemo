@@ -17,5 +17,10 @@ void luaS_resize (lua_State *L, int newsize) {
     GCObject **newhash;
     stringtable *tb;
     int i;
-    // TODO: 
+    /* 如果当前GC处于回收字符串数据的阶段，直接返回，不进行重新散列的操作 */
+    if (G(L)->gcstate == GCSsweepstring) {
+        return;
+    }
+    
+    
 }

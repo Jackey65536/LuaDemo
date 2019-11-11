@@ -14,6 +14,10 @@
 		563400BC2376C26A00C651F7 /* lua.c in Sources */ = {isa = PBXBuildFile; fileRef = 563400BB2376C26A00C651F7 /* lua.c */; };
 		563400BF2376C4B300C651F7 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 563400BE2376C4B300C651F7 /* lobject.c */; };
 		563400C32376C78300C651F7 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 563400C22376C78300C651F7 /* lstate.c */; };
+		5645433C2378FBB100F49794 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 5645433B2378FBB100F49794 /* lgc.c */; };
+		5645433F2378FD0F00F49794 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 5645433E2378FD0F00F49794 /* lmem.c */; };
+		564543422379078500F49794 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 564543412379078500F49794 /* ldo.c */; };
+		564543452379396600F49794 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 564543442379396600F49794 /* ldebug.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +50,14 @@
 		563400C12376C78300C651F7 /* lstate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lstate.h; sourceTree = "<group>"; };
 		563400C22376C78300C651F7 /* lstate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lstate.c; sourceTree = "<group>"; };
 		563400C42376C9D000C651F7 /* luaconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		5645433A2378FBB100F49794 /* lgc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lgc.h; sourceTree = "<group>"; };
+		5645433B2378FBB100F49794 /* lgc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
+		5645433D2378FD0F00F49794 /* lmem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lmem.h; sourceTree = "<group>"; };
+		5645433E2378FD0F00F49794 /* lmem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
+		564543402379078500F49794 /* ldo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ldo.h; sourceTree = "<group>"; };
+		564543412379078500F49794 /* ldo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
+		564543432379396600F49794 /* ldebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ldebug.h; sourceTree = "<group>"; };
+		564543442379396600F49794 /* ldebug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldebug.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,20 +91,28 @@
 		562F131F23669C0300CCB43A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				564543412379078500F49794 /* ldo.c */,
+				564543402379078500F49794 /* ldo.h */,
+				5645433B2378FBB100F49794 /* lgc.c */,
+				5645433A2378FBB100F49794 /* lgc.h */,
 				563400C02376C6B300C651F7 /* llimits.h */,
+				5645433E2378FD0F00F49794 /* lmem.c */,
+				5645433D2378FD0F00F49794 /* lmem.h */,
+				564543432379396600F49794 /* ldebug.h */,
+				564543442379396600F49794 /* ldebug.c */,
 				563400BE2376C4B300C651F7 /* lobject.c */,
 				563400BD2376C4B300C651F7 /* lobject.h */,
 				563400C22376C78300C651F7 /* lstate.c */,
 				563400C12376C78300C651F7 /* lstate.h */,
-				0D9640592378116300DA6625 /* lzio.h */,
-				0D96405C23781BAE00DA6625 /* ltm.h */,
-				0D96405D23781BAE00DA6625 /* ltm.c */,
-				0D96405A2378116300DA6625 /* lzio.c */,
 				0D96405723780CB800DA6625 /* lstring.c */,
 				0D96405623780CB800DA6625 /* lstring.h */,
+				0D96405D23781BAE00DA6625 /* ltm.c */,
+				0D96405C23781BAE00DA6625 /* ltm.h */,
 				563400BB2376C26A00C651F7 /* lua.c */,
 				563400BA2376C26A00C651F7 /* lua.h */,
 				563400C42376C9D000C651F7 /* luaconf.h */,
+				0D96405A2378116300DA6625 /* lzio.c */,
+				0D9640592378116300DA6625 /* lzio.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -155,10 +175,14 @@
 			files = (
 				0D96405B2378116300DA6625 /* lzio.c in Sources */,
 				563400BC2376C26A00C651F7 /* lua.c in Sources */,
+				5645433F2378FD0F00F49794 /* lmem.c in Sources */,
 				0D96405823780CB800DA6625 /* lstring.c in Sources */,
 				0D96405E23781BAE00DA6625 /* ltm.c in Sources */,
 				563400BF2376C4B300C651F7 /* lobject.c in Sources */,
+				564543452379396600F49794 /* ldebug.c in Sources */,
+				564543422379078500F49794 /* ldo.c in Sources */,
 				563400C32376C78300C651F7 /* lstate.c in Sources */,
+				5645433C2378FBB100F49794 /* lgc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

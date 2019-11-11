@@ -48,6 +48,9 @@ typedef struct CallInfo {
 } CallInfo;
 
 #define curr_func(L)    (clvalue(L->ci->func))
+#define ci_func(ci)     (clvalue((ci)->func))
+#define f_isLua(ci)     (!ci_func(ci)->c.isC)
+#define isLua(ci)       (ttisfunction((ci)->func) && f_isLua(ci))
 
 /*
     `global state`, shared by all threads of this state
@@ -56,7 +59,7 @@ typedef struct global_State {
     /* 所有字符串都房子strt中 */
     stringtable strt;   /* hash table for strings */
     lua_Alloc frealloc; /* function to reallocate memory */
-    void *ud;           /* auxiliary data to `frealloc` */
+    void *ud;           /* auxiliary(辅助的) data to `frealloc` */
     lu_byte currentwhite;
     lu_byte gcstate;    /* state of garbage collector */
     int sweepstrgc;     /* position of sweep in `strt` */

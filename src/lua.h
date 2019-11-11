@@ -1,10 +1,6 @@
-//
-//  lua.h
-//  LuaDemo
-//
-//  Created by 刘杰 on 2019/11/9.
-//  Copyright © 2019 刘杰. All rights reserved.
-//
+/*
+    lua.h
+ */
 
 #ifndef lua_h
 #define lua_h
@@ -18,6 +14,25 @@
 #define LUA_VERSION_NUM 501
 #define LUA_COPYRIGHT   "Copyright (C) 1994-2008 Lua.org, PUC-Rio"
 #define LUA_AUTHORS     "R. Ierusalimschy, L. H. de Figueiredo & W. Celes"
+
+/* mark for precompiled code (`<esc>Lua`) */
+#define LUA_SIGNATURE   "\033Lua"
+
+/* option for multiple returns in `lua_pacall` and `lua_call` */
+#define LUA_MULTRET (-1)
+
+/* pseudo-indices */
+#define LUA_REGISTRYINDEX   (-10000)
+#define LUA_ENVIRONINDEX    (-10001)
+#define LUA_GLOBALSINDEX    (-10002)
+#define lua_upvalueindex(i) (LUA_GLOBALSINDEX-(i))
+
+/* thread status; 0 is OK */
+#define LUA_YIELD       1
+#define LUA_ERRRUN      2
+#define LUA_ERRSYNTAX   3
+#define LUA_ERRMEM      4
+#define LUA_ERRERR      5
 
 typedef struct lua_State lua_State;
 

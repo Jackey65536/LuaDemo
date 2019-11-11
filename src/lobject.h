@@ -1,10 +1,6 @@
-//
-//  lobject.h
-//  LuaDemo
-//
-//  Created by 刘杰 on 2019/11/9.
-//  Copyright © 2019 刘杰. All rights reserved.
-//
+/*
+    lobject.h
+*/
 
 #ifndef lobject_h
 #define lobject_h
@@ -85,7 +81,14 @@ typedef struct lua_TValue {
 /* lua_State */
 #define thvalue(o)  check_exp(ttisthread(o), &(o)->value.gc->th)
 
-#define l_isfalse(o)    (ttisnil(o) || (ttisboolean(o) && bvalue(o) == 0)
+#define l_isfalse(o)    (ttisnil(o) || (ttisboolean(o) && bvalue(o) == 0))
+
+/* for internal debug only */
+#define checkconsistency(obj) \
+    lua_assert(!iscollectable(obj) || (ttype(obj) == (obj)->value.gc->gch.tt))
+#define checkliveness(g,obj) \
+    lua_assert(!iscollectable(obj) || \
+    ((ttype(obj) == (obj)->value.gc->gch.tt) && !isdead(g, (obj)->value.gc)))
 
 typedef TValue *StkId;  /* index to stack elemnts */
 
