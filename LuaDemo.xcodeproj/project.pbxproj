@@ -10,6 +10,7 @@
 		0D96405823780CB800DA6625 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D96405723780CB800DA6625 /* lstring.c */; };
 		0D96405B2378116300DA6625 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D96405A2378116300DA6625 /* lzio.c */; };
 		0D96405E23781BAE00DA6625 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D96405D23781BAE00DA6625 /* ltm.c */; };
+		0DF7A77E2379A93B009CEBF9 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF7A77D2379A93B009CEBF9 /* lgc.c */; };
 		562F13882366A8B900CCB43A /* scripts in CopyFiles */ = {isa = PBXBuildFile; fileRef = 562F13872366A71F00CCB43A /* scripts */; };
 		563400BC2376C26A00C651F7 /* lua.c in Sources */ = {isa = PBXBuildFile; fileRef = 563400BB2376C26A00C651F7 /* lua.c */; };
 		563400BF2376C4B300C651F7 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 563400BE2376C4B300C651F7 /* lobject.c */; };
@@ -36,6 +37,8 @@
 		0D96405A2378116300DA6625 /* lzio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
 		0D96405C23781BAE00DA6625 /* ltm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ltm.h; sourceTree = "<group>"; };
 		0D96405D23781BAE00DA6625 /* ltm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ltm.c; sourceTree = "<group>"; };
+		0DF7A77C2379A93B009CEBF9 /* lgc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lgc.h; sourceTree = "<group>"; };
+		0DF7A77D2379A93B009CEBF9 /* lgc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
 		562F131D23669C0300CCB43A /* LuaDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LuaDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		562F13872366A71F00CCB43A /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		563400BA2376C26A00C651F7 /* lua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				563400BE2376C4B300C651F7 /* lobject.c */,
 				563400BD2376C4B300C651F7 /* lobject.h */,
 				563400C22376C78300C651F7 /* lstate.c */,
+				0DF7A77C2379A93B009CEBF9 /* lgc.h */,
+				0DF7A77D2379A93B009CEBF9 /* lgc.c */,
 				563400C12376C78300C651F7 /* lstate.h */,
 				0D9640592378116300DA6625 /* lzio.h */,
 				0D96405C23781BAE00DA6625 /* ltm.h */,
@@ -159,6 +164,7 @@
 				0D96405E23781BAE00DA6625 /* ltm.c in Sources */,
 				563400BF2376C4B300C651F7 /* lobject.c in Sources */,
 				563400C32376C78300C651F7 /* lstate.c in Sources */,
+				0DF7A77E2379A93B009CEBF9 /* lgc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
